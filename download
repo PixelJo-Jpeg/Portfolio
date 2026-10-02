@@ -1,0 +1,17 @@
+# Local scratch
+*.tmp
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Never commit a copy of the standalone build; regenerate it instead.
+jowel-portfolio-OFFLINE.html
+jowel-portfolio-PRINT.html
+jowel-portfolio.pdf
