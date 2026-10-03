@@ -74,10 +74,22 @@ img{max-width:100%}
   position:relative;
   padding:88px 4.4% 64px;
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,.72fr);
+  grid-template-columns:minmax(0,1fr);
   gap:48px;
   align-items:end;
-  min-height:min(830px,88vh)
+  min-height:min(830px,88vh);
+  background-size:cover;
+  background-position:center;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(16,17,20,.92) 0%,rgba(16,17,20,.75) 45%,rgba(16,17,20,.35) 100%);
+  z-index:0;
+}
+.hero-copy{position:relative;z-index:2;padding-bottom:8px}
+.hero-role{
+  font:italic 400 clamp(1.1rem,2vw,1.5rem)/1.4 "Playfair Display",serif;
+  color:var(--acc);margin:18px 0 0;
 }
 .halo{
   position:absolute;top:6%;right:2%;
@@ -85,7 +97,6 @@ img{max-width:100%}
   background:radial-gradient(circle,rgba(245,197,66,.14) 0%,rgba(245,197,66,.04) 42%,transparent 68%);
   pointer-events:none;z-index:0
 }
-.hero-copy{position:relative;z-index:2;padding-bottom:8px}
 .hero h1{
   font:400 clamp(2.7rem,4.6vw,3.9rem)/1.14 "Playfair Display",serif;
   letter-spacing:-.02em;margin:0
@@ -333,11 +344,12 @@ img{max-width:100%}
 
   <main id="top">
 
-  <section class="hero">
+  <section class="hero" id="top" style="background-image:url('hero-photo.png');background-size:cover;background-position:center 30%;">
     <div class="halo" aria-hidden="true"></div>
 
     <div class="hero-copy">
-      <h1><em>Graphic designer</em> building<br>brands shaping visuals<br>with purpose and impact.</h1>
+      <h1><em>Jowel</em><br>Tamondong</h1>
+      <p class="hero-role">Graphic Designer &amp; Visual Creative</p>
 
       <div class="meta">
         <div><small>Based</small><span>Philippines</span></div>
@@ -349,22 +361,6 @@ img{max-width:100%}
       <p class="caption">Jowel Tamondong · Graphic Designer · Manila, PH</p>
     </div>
 
-    <figure class="hero-art" aria-hidden="true">
-      <div class="art-card art-identity">
-        <span class="art-mono">JT.</span>
-        <span class="art-name">Jowel<br>Tamondong</span>
-        <span class="art-kicker">Graphic Design</span>
-      </div>
-      <div class="art-card art-palette">
-        <b>Palette</b>
-        <div class="swatches"><i></i><i></i><i></i><i></i></div>
-        <span class="art-kicker">#F5C542</span>
-      </div>
-      <div class="art-card art-type">
-        <span class="art-glyph">A<em>a</em></span>
-        <span class="art-kicker">Type</span>
-      </div>
-    </figure>
   </section>
 
   <section class="section" id="work">

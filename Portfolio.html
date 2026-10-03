@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e0f13">
+<meta name="description" content="Jowel Tamondong — Graphic Designer & Visual Creative. Branding, print, digital campaigns, and visual experiences.">
+<title>Jowel Tamondong — Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101114;
+  --ink:#f3f0eb;
+  --muted:#a6a4aa;
+  --dim:#8e8b94;
+  --line:rgba(255,255,255,.14);
+  --line-soft:rgba(255,255,255,.09);
+  --acc:#f5c542;
+  --acc-ink:#17171a;
+  --panel:#1a1b21;
+  --max:1440px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  -webkit-font-smoothing:antialiased
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+
+.shell{width:min(100%,var(--max));margin:0 auto;position:relative;overflow:hidden}
+
+/* ---------- navigation ---------- */
+.nav{
+  height:88px;padding:0 4.4%;
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:5
+}
+.brand{display:flex;align-items:center;gap:24px}
+.brand strong{
+  font-weight:600;font-size:16px;position:relative;padding-bottom:5px
+}
+.brand strong:after{
+  content:"";position:absolute;left:0;bottom:0;
+  width:100%;height:2px;background:var(--acc)
+}
+.brand span{
+  color:var(--muted);font-size:14px;
+  border-left:1px solid var(--line);padding-left:24px
+}
+.navlinks{display:flex;align-items:center;gap:32px;font-size:14px;color:#d3d0d4}
+.navlinks a{transition:color .2s}
+.navlinks a:hover{color:var(--acc)}
+.pill{
+  border:1px solid transparent;background:var(--ink);color:var(--acc-ink);
+  border-radius:99px;padding:11px 20px;font-size:13px;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:transform .2s,background .2s
+}
+.pill:hover{transform:translateY(-2px);background:var(--acc)}
+.pill svg{width:13px;height:13px;flex:none}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:88px 4.4% 64px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:48px;
+  align-items:end;
+  min-height:min(830px,88vh);
+  background-size:cover;
+  background-position:center;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(16,17,20,.92) 0%,rgba(16,17,20,.75) 45%,rgba(16,17,20,.35) 100%);
+  z-index:0;
+}
+.hero-copy{position:relative;z-index:2;padding-bottom:8px}
+.hero-role{
+  font:italic 400 clamp(1.1rem,2vw,1.5rem)/1.4 "Playfair Display",serif;
+  color:var(--acc);margin:18px 0 0;
+}
+.halo{
+  position:absolute;top:6%;right:2%;
+  width:min(52vw,620px);aspect-ratio:1;
+  background:radial-gradient(circle,rgba(245,197,66,.14) 0%,rgba(245,197,66,.04) 42%,transparent 68%);
+  pointer-events:none;z-index:0
+}
+.hero h1{
+  font:400 clamp(2.7rem,4.6vw,3.9rem)/1.14 "Playfair Display",serif;
+  letter-spacing:-.02em;margin:0
+}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.meta{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px 34px;margin-top:clamp(56px,10vh,110px);max-width:560px
+}
+.meta small{
+  display:block;color:var(--dim);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:7px
+}
+.meta span{font-size:14px;color:#e8e5e7}
+.caption{
+  margin-top:44px;color:#6f6d75;font-size:12px;letter-spacing:.24em;text-transform:uppercase
+}
+.hero-art{
+  position:relative;z-index:1;
+  align-self:center;justify-self:end;
+  width:100%;max-width:460px;
+  aspect-ratio:1/.92;
+  margin:0
+}
+.art-card{
+  position:absolute;
+  border:1px solid var(--line);
+  background:var(--panel);
+  box-shadow:0 26px 60px rgba(0,0,0,.5)
+}
+.art-kicker{
+  display:block;font-size:9px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--dim)
+}
+.art-identity{
+  right:6%;top:0;width:62%;height:62%;
+  transform:rotate(5deg);
+  z-index:2;
+  background:linear-gradient(150deg,#1d1e25,#121318 70%);
+  padding:24px;
+  display:flex;flex-direction:column;justify-content:space-between
+}
+.art-mono{
+  font:700 26px "DM Sans",sans-serif;
+  letter-spacing:-.08em;color:var(--acc)
+}
+.art-name{
+  font:italic 400 34px/1.05 "Playfair Display",serif;color:var(--ink)
+}
+.art-palette{
+  left:0;bottom:2%;width:42%;height:38%;
+  transform:rotate(-7deg);
+  z-index:3;
+  background:#f1ede4;color:var(--acc-ink);
+  padding:16px;
+  display:flex;flex-direction:column;justify-content:space-between
+}
+.art-palette b{font:700 13px "DM Sans",sans-serif;letter-spacing:-.02em}
+.swatches{display:flex;gap:6px}
+.swatches i{display:block;width:26px;height:26px;background:var(--acc)}
+.swatches i:nth-child(2){background:#1c2934}
+.swatches i:nth-child(3){background:#e6652c}
+.swatches i:nth-child(4){background:#c9c6cc}
+.art-type{
+  right:0;bottom:0;width:38%;height:32%;
+  transform:rotate(8deg);
+  z-index:1;
+  background:#141519;
+  padding:16px;
+  display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end
+}
+.art-glyph{
+  font:400 44px/1 "Playfair Display",serif;color:var(--ink)
+}
+.art-glyph em{font-style:italic;color:var(--acc)}
+
+/* ---------- sections ---------- */
+.section{padding:112px 7%;border-top:1px solid var(--line)}
+.eyebrow{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--acc);margin-bottom:22px
+}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;margin-bottom:44px
+}
+.section h2{
+  font:400 clamp(2.6rem,4.6vw,4.6rem)/1.04 "Playfair Display",serif;
+  letter-spacing:-.03em;margin:0
+}
+.section h2 em{font-style:italic;color:var(--acc);font-weight:400}
+.section-intro{max-width:330px;color:var(--muted);font-size:14px;line-height:1.7}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}
+.filters button{
+  background:transparent;border:1px solid var(--line);color:#c9c6cc;
+  border-radius:99px;padding:9px 16px;font-size:12px;cursor:pointer;
+  transition:border-color .2s,color .2s,background .2s
+}
+.filters button:hover{border-color:var(--acc);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--acc-ink);border-color:var(--ink);font-weight:700}
+
+/* ---------- project grid ---------- */
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 24px}
+.project{display:block;min-width:0}
+.project-visual{
+  aspect-ratio:1.34;overflow:hidden;position:relative;
+  background:var(--panel);border:1px solid var(--line-soft);
+  transition:transform .35s,border-color .35s
+}
+.project:hover .project-visual{transform:translateY(-5px);border-color:rgba(245,197,66,.5)}
+.project-visual img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .5s,filter .35s;filter:saturate(.92)
+}
+.project:hover .project-visual img{transform:scale(1.045);filter:saturate(1.05)}
+.project-visual:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.5));
+  opacity:.6;transition:opacity .3s
+}
+.project:hover .project-visual:after{opacity:.85}
+.project-badge{
+  position:absolute;left:14px;top:14px;z-index:2;
+  background:rgba(14,15,18,.72);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.16);color:#eae6ef;
+  border-radius:99px;padding:5px 12px;
+  font-size:10px;letter-spacing:.09em;text-transform:uppercase
+}
+.project-info{display:flex;justify-content:space-between;gap:15px;padding-top:16px}
+.project-info h3{font-size:16px;font-weight:500;margin:0 0 6px}
+.project-info p{font-size:12px;color:var(--muted);margin:0}
+.project-arrow{
+  font-size:20px;color:var(--acc);flex:none;
+  transition:transform .2s
+}
+.project:hover .project-arrow{transform:translate(3px,-3px)}
+.project[hidden]{display:none}
+.work-note{margin-top:44px;color:var(--muted);font-size:13px}
+.work-note a{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+
+/* ---------- about ---------- */
+.about-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:8%;align-items:start
+}
+.about-copy{
+  font:400 clamp(1.5rem,2.9vw,2.6rem)/1.36 "Playfair Display",serif;
+  max-width:760px
+}
+.about-copy em{font-style:normal;color:var(--acc)}
+.about-details{border-top:1px solid var(--line)}
+.detail{
+  padding:18px 0;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:20px;font-size:13px
+}
+.detail span:first-child{color:var(--muted)}
+.detail a{color:var(--acc)}
+
+/* ---------- contact ---------- */
+.contact{
+  background:radial-gradient(ellipse at 85% 100%,rgba(245,197,66,.1),transparent 45%);
+  text-align:center;padding:120px 7% 130px
+}
+.contact h2{max-width:900px;margin:0 auto 28px}
+.contact p{color:var(--muted);font-size:14px;margin-bottom:32px}
+.contact-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+.footer{
+  padding:26px 7%;display:flex;justify-content:space-between;gap:20px;
+  border-top:1px solid var(--line);font-size:11px;color:var(--muted)
+}
+.footer a:hover{color:var(--ink)}
+
+.menu-toggle{
+  display:none;background:none;border:1px solid var(--line);color:var(--ink);
+  border-radius:30px;padding:8px 13px;font-size:13px;cursor:pointer
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:36px;padding:64px 6% 56px;min-height:0}
+  .hero-art{justify-self:center;max-width:360px}
+  .meta{margin-top:48px}
+  .section{padding:88px 6%}
+  .section-head{align-items:flex-start;flex-direction:column}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+}
+@media(max-width:640px){
+  .shell{width:100%}
+  .nav{height:70px;padding:0 22px}
+  .brand{font-size:13px;gap:0}
+  .brand span{display:none}
+  .navlinks{
+    display:none;position:absolute;top:62px;right:16px;left:16px;
+    padding:20px;background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;flex-direction:column;align-items:stretch;gap:18px
+  }
+  .navlinks.open{display:flex}
+  .navlinks .pill{justify-content:center}
+  .menu-toggle{display:block}
+  .hero{padding:48px 22px 44px}
+  .hero h1{font-size:clamp(2.1rem,9.5vw,3rem);line-height:1.12}
+  .hero-art{max-width:270px;justify-self:center}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;margin-top:44px}
+  .meta span{font-size:13px}
+  .caption{font-size:10px;letter-spacing:.18em;margin-top:32px}
+  .section{padding:76px 22px}
+  .projects{grid-template-columns:1fr;gap:32px}
+  .project-visual{aspect-ratio:1.25}
+  .filters{gap:7px}
+  .filters button{padding:8px 13px;font-size:11px}
+  .contact{padding:88px 22px}
+  .contact-actions .pill{width:100%;justify-content:center}
+  .footer{padding:22px;flex-direction:column}
+  .about-copy{font-size:1.55rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <strong>Jowel Tamondong</strong>
+      <span>Graphic Designer &amp; Visual Creative</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <nav class="navlinks" id="mainnav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="pill" href="https://www.behance.net/joweltamondong2" target="_blank" rel="noopener">
+        Behance
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+  <section class="hero" id="top" style="background-image:url('hero-photo.png');background-size:cover;background-position:center 30%;">
+    <div class="halo" aria-hidden="true"></div>
+
+    <div class="hero-copy">
+      <h1><em>Jowel</em><br>Tamondong</h1>
+      <p class="hero-role">Graphic Designer &amp; Visual Creative</p>
+
+      <div class="meta">
+        <div><small>Based</small><span>Philippines</span></div>
+        <div><small>Focus</small><span>Branding, Print &amp; Digital Design</span></div>
+        <div><small>Experience</small><span>7+ years in design</span></div>
+        <div><small>Open for</small><span>Freelance &amp; remote projects</span></div>
+      </div>
+
+      <p class="caption">Jowel Tamondong · Graphic Designer · Manila, PH</p>
+    </div>
+
+  </section>
+
+  <section class="section" id="work">
+    <div class="eyebrow">01 / Selected work</div>
+    <div class="section-head">
+      <h2>Work with purpose.</h2>
+      <p class="section-intro">Every project below opens its full case study on Behance. Filter by discipline, then pick a project to see the complete process.</p>
+    </div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter projects by discipline"></div>
+    <div class="projects" id="projects"></div>
+
+    <p class="work-note">Want the full archive, including owner-shots and behind-the-scenes? <a href="https://www.behance.net/joweltamondong2" target="_blank" rel="noopener">See everything on Behance ↗</a></p>
+  </section>
+
+  <section class="section" id="about">
+    <div class="eyebrow">02 / About</div>
+    <div class="about-grid">
+      <p class="about-copy">I turn ideas into <em>clear, distinctive visuals</em>—from brand identities and restaurant campaigns to print and digital experiences. My approach balances creative thinking with practical design that works across real-world touchpoints.</p>
+      <div class="about-details">
+        <div class="detail"><span>Experience</span><span>7+ years</span></div>
+        <div class="detail"><span>Marketing</span><span>3+ years</span></div>
+        <div class="detail"><span>Core tools</span><span>Photoshop · Illustrator</span></div>
+        <div class="detail"><span>Location</span><span>Philippines · Remote</span></div>
+        <div class="detail"><span>Portfolio</span><a href="https://www.behance.net/joweltamondong2" target="_blank" rel="noopener">Behance ↗</a></div>
+        <div class="detail"><span>Email</span><a href="mailto:joweltamondong123@gmail.com">joweltamondong123@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="eyebrow">03 / Get in touch</div>
+    <h2>Have a good idea?<br><em>Let's make it real.</em></h2>
+    <p>Available for freelance, collaborations, and remote opportunities.</p>
+    <div class="contact-actions">
+      <a class="pill" href="mailto:joweltamondong123@gmail.com">
+        joweltamondong123@gmail.com
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="pill" href="https://www.behance.net/joweltamondong2" target="_blank" rel="noopener">
+        Behance portfolio
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Jowel Tamondong</span>
+    <span>Designed with clarity and character.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</div>
+
+<script>
+// Projects open their own full case study on Behance.
+const BEHANCE = "https://www.behance.net/gallery/";
+const PROJECTS = [
+  { id:"244709377", slug:"Brand-Identity",        title:"Brand Identity",        cat:"Branding",   tags:"Logo system · Visual identity · Guidelines",      cover:"a23bcf244709377.Y3JvcCw4MDgsNjMyLDAsMA.jpg" },
+  { id:"212759367", slug:"TFF-ARTWORKS",           title:"TFF Artworks",           cat:"Branding",   tags:"Brand collateral · Social assets",                 cover:"aa313b212759367.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg" },
+  { id:"238026869", slug:"MOO",                    title:"MOO",                    cat:"Branding",   tags:"Identity design · Packaging concept",              cover:"f3ffd7238026869.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg" },
+  { id:"207817271", slug:"Food-Label-Design",      title:"Food Label Design",     cat:"Packaging",  tags:"Labels · Nutrition layout · Print production",    cover:"e3247c207817271.Y3JvcCwzODM1LDMwMDAsODUsMA.jpg" },
+  { id:"179176383", slug:"Campaign-Poster",        title:"Campaign Poster",        cat:"Poster",     tags:"Key visual · Layout · Typography",                 cover:"ba468d179176383.Y3JvcCw4MDgsNjMyLDAsMA.png" },
+  { id:"190851059", slug:"Promotional-Poster",     title:"Promotional Poster",     cat:"Poster",     tags:"Promotion · Print artwork",                         cover:"dea1df190851059.Y3JvcCwxNDAwLDEwOTUsMCwxNTI.jpg" },
+  { id:"174840325", slug:"Jewelry-Banner",         title:"Jewelry Banner",        cat:"Banner",     tags:"Display banner · Retail creative",                  cover:"87a9f3174840325.Y3JvcCw4MDgsNjMyLDAsMA.png" },
+  { id:"194258019", slug:"Facebook-Advertisment",  title:"Facebook Advertisement", cat:"Ads",       tags:"Paid social · Ad creative · Copy layout",            cover:"619259194258019.Y3JvcCwxNTAwLDExNzMsMCwxMTU.jpg" },
+  { id:"243369677", slug:"Social-Media-Posting",   title:"Social Media Posting",   cat:"Social",     tags:"Feed design · Content templates",                   cover:"3324ae243369677.Y3JvcCwxNTAwLDExNzMsMCwxNjM.jpg" },
+  { id:"249181563", slug:"Email-Marketing-Design", title:"Email Marketing Design", cat:"Email",      tags:"Campaign email · Newsletter modules",               cover:"cb1cd3249181563.Y3JvcCwxMTk5LDkzOCwwLDA.jpg" },
+  { id:"250119037", slug:"Amazon-Hero-Images",     title:"Amazon Hero Images",     cat:"E-commerce", tags:"Listing hero · A+ content · Marketplace",           cover:"0834e8250119037.Y3JvcCwxMTk5LDkzOCwwLDA.jpg" },
+  { id:"256468121", slug:"Landing-Page-Reference", title:"Landing Page Reference", cat:"Web",        tags:"Web layout · UI reference · Direction",             cover:"fd5a31256468121.Y3JvcCwyNTU2LDIwMDAsMCww.jpg" }
+];
+
+const imgSrc  = (p) => "https://mir-s3-cdn-cf.behance.net/projects/808/" + p.cover;
+const pageHref = (p) => BEHANCE + p.id + "/" + p.slug;
+
+const projectGrid = document.getElementById("projects");
+const filterBar = document.getElementById("filters");
+
+projectGrid.innerHTML = PROJECTS.map((p, i) => `
+  <a class="project" href="${pageHref(p)}" target="_blank" rel="noopener"
+     data-cat="${p.cat}" style="opacity:0;transition:opacity .5s ease ${i * 0.05}s"
+     onanimationend="this.style.opacity='1'">
+    <div class="project-visual">
+      <img src="${imgSrc(p)}" alt="${p.title} — ${p.tags}" loading="lazy" decoding="async"
+           onerror="this.style.display='none'">
+      <span class="project-badge">${p.cat}</span>
+    </div>
+    <div class="project-info">
+      <div><h3>${p.title}</h3><p>${p.tags}</p></div>
+      <span class="project-arrow" aria-hidden="true">↗</span>
+    </div>
+  </a>`).join("");
+
+// Fade cards in once they mount.
+requestAnimationFrame(() => {
+  projectGrid.querySelectorAll(".project").forEach(c => { c.style.opacity = "1"; });
+});
+
+// Filters are built from the categories actually present.
+const cats = ["All", ...new Set(PROJECTS.map(p => p.cat))];
+filterBar.innerHTML = cats.map((c, i) =>
+  `<button type="button" data-filter="${c}" aria-pressed="${i === 0}">${c}</button>`
+).join("");
+
+filterBar.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-filter]");
+  if (!btn) return;
+  const want = btn.dataset.filter;
+  filterBar.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+  projectGrid.querySelectorAll(".project").forEach(card => {
+    card.hidden = !(want === "All" || card.dataset.cat === want);
+  });
+});
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.getElementById("mainnav");
+toggle.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", String(open));
+});
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  nav.classList.remove("open");
+  toggle.setAttribute("aria-expanded", "false");
+}));
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
